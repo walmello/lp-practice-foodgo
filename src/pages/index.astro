@@ -8,10 +8,7 @@ import heroImage from '../assets/hero-image.png';
 ---
 
 <Layout>
-	<link rel="preconnect" href="https://fonts.googleapis.com">
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-	<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-	
+
 	<div class="content">
 		<div class="container">
 			<div class="navbar">
@@ -59,13 +56,30 @@ import heroImage from '../assets/hero-image.png';
 </Layout>
 
 <style>
+	/* Register your custom font family and tell the browser where to find it. */
+	@font-face {
+		font-family: 'Caprasimo';
+		src: url('/fonts/Caprasimo-Regular.ttf') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+	
+	@font-face {
+		font-family: 'Inter';
+		src: url('/fonts/Inter-VariableFont_opsz,wght.ttf') format('woff');
+		font-weight: normal;
+		font-style: normal;
+		font-display: swap;
+	}
+
 	:root {
 		--black: #2A0F0B;
 		--white: #fff;
 		--light: #F3F1EF;
 		--orange: #F05236;
 	}
-
+	
 	* {
 		box-sizing: border-box;
 		margin: 0;
@@ -189,7 +203,7 @@ import heroImage from '../assets/hero-image.png';
 		.button-group {
 			flex-direction: column;
 		}
-
+		
 		.button-group * {
 			width: 100%;
 		}
