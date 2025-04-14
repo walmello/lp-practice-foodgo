@@ -1,0 +1,162 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
+// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+---
+
+<Layout>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+	
+	<div class="content">
+		<div class="container">
+			<div class="navbar">
+				<img src="foodgo-logo.svg" alt="">
+				<ul>
+					<li><a href="#">Our Products</a></li>
+					<li><a href="#">Services</a></li>
+					<li><a href="#">Pricing</a></li>
+					<li><a href="#">Clients</a></li>
+					<li><a href="#">Helpdesk</a></li>
+				</ul>
+				<a class="button">
+					Get the app →
+				</a>
+			</div>
+			<div class="hero">
+				<div class="hero-content">
+					<p style="font-weight: bold;">Food Made with <span class="text-orange">❤</span> For you</p>
+					<h1>
+						Satisfy your 
+						hunger, with 
+						<span class="text-orange">ONE CLICK</span>
+					</h1>
+					<p class="subtitle">
+						Find nearest restaurants and groceries near you, don't keep 
+						your hunger waiting! 
+					</p>
+					<div class="button-group">
+						<a href="" class="button button-cta button-outline">
+							What we do?
+						</a>
+						<a href="" class="button button-cta">
+							Get the app
+						</a>
+					</div>
+				</div>
+				<div>
+					<img src="hero-image.png" alt="" srcset="">
+				</div>
+			</div>	
+		</div>
+		
+		<img class="waves" src="waves.svg" alt="" srcset="">
+	</div>
+</Layout>
+
+<style>
+	:root {
+		--black: #2A0F0B;
+		--white: #fff;
+		--light: #F3F1EF;
+		--orange: #F05236;
+	}
+	
+	body {
+		font-family: Inter;
+		background-color: var(--light);
+	}
+	
+	.content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		min-height: 100vh;
+	}
+	
+	.waves {
+		width: 100%;
+	}
+	
+	.container {
+		width: 100%;
+		max-width: 1200px;
+		margin: 0 auto;
+	}
+	
+	.navbar {
+		display: flex;
+		justify-content: space-between;
+		padding: 1rem;
+	}
+	
+	ul {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		gap: 1rem;
+	}
+	
+	a {
+		font-weight: bold;
+		color: var(--black);
+		text-decoration: none;
+	}
+	
+	.hero {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+	}
+	
+	.hero-content {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		gap: 1rem;
+	}
+	
+	.hero-content > * {
+		margin: 0;
+	}
+	
+	.button-group {
+		display: flex;
+		align-items: center;
+		gap: 2rem;
+	}
+	
+	.button {
+		background-color: var(--black);
+		padding: 1rem 2rem;
+		color: var(--white);
+		border-radius: 999rem;
+		border: 2px solid var(--black);
+	}
+	
+	.button.button-cta {
+		background-color: var(--orange);
+		border: 2px solid var(--orange);
+	}
+	
+	.button.button-outline{
+		color: var(--orange);
+		background-color: transparent;
+		border: 2px solid var(--orange);
+	}
+	
+	h1 {
+		font-family: Caprasimo, serif;
+		font-weight: normal;
+		font-size: 4rem;
+	}
+	
+	.subtitle {
+		font-size: 1.2rem;
+	} 
+	
+	.text-orange {
+		color: var(--orange);
+	}
+</style>
