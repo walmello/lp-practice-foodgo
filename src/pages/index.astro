@@ -49,7 +49,7 @@ import heroImage from '../assets/hero-image.png';
 					</div>
 				</div>
 				<div>
-					<Image src={heroImage} alt="Women thinking on what to eat"></Image>
+					<Image class="hero-image" src={heroImage} alt="Women thinking on what to eat"></Image>
 				</div>
 			</div>	
 		</div>
@@ -65,10 +65,17 @@ import heroImage from '../assets/hero-image.png';
 		--light: #F3F1EF;
 		--orange: #F05236;
 	}
+
+	* {
+		box-sizing: border-box;
+		margin: 0;
+		padding: 0;
+	}
 	
 	body {
 		font-family: Inter;
 		background-color: var(--light);
+		overflow-x: hidden;
 	}
 	
 	.content {
@@ -86,12 +93,13 @@ import heroImage from '../assets/hero-image.png';
 		width: 100%;
 		max-width: 1200px;
 		margin: 0 auto;
+		padding: 0 2rem;
 	}
 	
 	.navbar {
 		display: flex;
 		justify-content: space-between;
-		padding: 1rem;
+		padding: 1rem 0;
 	}
 	
 	ul {
@@ -116,7 +124,7 @@ import heroImage from '../assets/hero-image.png';
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
-		gap: 1rem;
+		gap: 2rem;
 	}
 	
 	.hero-content > * {
@@ -126,7 +134,7 @@ import heroImage from '../assets/hero-image.png';
 	.button-group {
 		display: flex;
 		align-items: center;
-		gap: 2rem;
+		gap: 1rem;
 	}
 	
 	.button {
@@ -154,8 +162,39 @@ import heroImage from '../assets/hero-image.png';
 		font-size: 4rem;
 	}
 	
+	.hero-image {
+		width: 100%;
+		object-fit: contain;
+	}
+	
+	@media (max-width: 1200px) {
+		h1 {
+			font-size: 3rem;
+		}
+		
+		
+	}
+	
+	@media (max-width: 1000px) {
+		.hero {
+			display: flex;
+			flex-direction: column;
+		}
+		
+		.navbar ul {
+			display: none;
+		}
+		
+		.button-group {
+			flex-direction: column;
+		}
+
+		.button-group * {
+			width: 100%;
+		}
+	}
 	.subtitle {
-		font-size: 1.2rem;
+		font-size: 1.5rem;
 	} 
 	
 	.text-orange {
